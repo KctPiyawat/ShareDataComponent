@@ -3,4 +3,11 @@
 
 <!--App Component-->
 <h4>This is {{nameParrentString}}</h4>
+<p>Show Number of Parrent ==> {{numberParrentIng}}</p>
+<button (click)="onClickIncreaseNumberParrent()">Increase NumberParrent</button>
 
+
+<hr/>
+
+<!--Chid Component-->
+<app-childcomponent [nameFromParrent]="nameChildString"></app-childcomponent>

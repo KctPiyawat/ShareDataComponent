@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-childcomponent',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./childcomponent.component.css']
 })
 export class ChildcomponentComponent implements OnInit {
+
+  // Explicit
+  @Input() nameFromParrent: string;
 
   constructor() { }
 
