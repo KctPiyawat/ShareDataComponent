@@ -13,6 +13,11 @@ export class AppComponent {
   nameChildString = 'Child Componet';
 
   numberParrentIng = 0;
+  numberFromChild = 0;
+
+  onchangeChild(changeNumberFromchild) {
+    this.numberFromChild = changeNumberFromchild;
+  }
 
   onClickIncreaseNumberParrent() {
 

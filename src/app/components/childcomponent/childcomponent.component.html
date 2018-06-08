@@ -1,1 +1,6 @@
 <h4>This is {{nameFromParrent}}</h4>
+<p>Show Number from Parrent ==> {{numberFromParrent}}</p>
+<p [style.color]="colorChild">Show Number of Child ==> {{numberChildInt}}</p>
+<button (click)="onClickIncreaseNuberChild()"
+        [style.color]="colorChild">Increase Number Child
+</button>
