@@ -7,21 +7,27 @@
 <p style="color: #ff3243">Show Nuber of Child ==>{{numberFromChild}}</p>
 <button (click)="onClickIncreaseNumberParrent()">Increase NumberParrent</button>
 
-<br><br><br>
+<br/><br/>
 
-<input type="text" [placeholder]="namePlaceHolder">
-<button>Sent to Child</button>
+<input #nameInput type="text" [placeholder]="namePlaceHolder" >
+<button (click)="onClickSentToChild(nameInput.value)">Sent to Child</button>
 
-<br><br>
+<br/>
 
+<h4>Name From Input Parrent ==>{{nameInputParrentString}} </h4>
+
+<br/><br/>
 
 <hr/>
 
 
 
+
 <!--Chid Component-->
-<app-childcomponent (eventIncreaseChild)="onchangeChild($event)" [nameFromParrent]="nameChildString"
-                    [numberFromParrent]="numberParrentIng">
+<app-childcomponent (eventIncreaseChild)="onchangeChild($event)"
+                    [nameFromParrent]="nameChildString"
+                    [numberFromParrent]="numberParrentIng"
+                    [nameInputFromParrent]="nameInputSentToChild" >
 
 </app-childcomponent>
 
